@@ -1,0 +1,207 @@
+---
+import { siteConfig } from "../config";
+
+const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
+const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
+const hasEducation = siteConfig.education && siteConfig.education.length > 0;
+---
+
+<header
+  id="header"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+>
+  <nav class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+    <!-- Logo/Brand -->
+    <div class="flex-shrink-0">
+      <a 
+        href="#" 
+        class="text-lg md:text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+      >
+        {siteConfig.name.split(" ")[0]}
+      </a>
+    </div>
+
+    <!-- Menu hamburger button (mobile) -->
+    <button
+      id="menu-toggle"
+      class="md:hidden flex flex-col gap-1.5 cursor-pointer p-2 hover:bg-gray-100 rounded-lg transition-colors"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <span class="w-6 h-0.5 bg-gray-800 transition-all duration-300 transform origin-center"></span>
+      <span class="w-6 h-0.5 bg-gray-800 transition-all duration-300 transform origin-center"></span>
+      <span class="w-6 h-0.5 bg-gray-800 transition-all duration-300 transform origin-center"></span>
+    </button>
+
+    <!-- Navigation menu -->
+    <ul
+      id="nav-menu"
+      class="hidden md:flex absolute md:relative top-full md:top-0 left-0 right-0 md:left-auto md:right-auto bg-white md:bg-transparent flex-col md:flex-row items-stretch md:items-center gap-0 md:gap-1 justify-center w-full md:w-auto py-2 md:py-0 md:items-center shadow-lg md:shadow-none rounded-b-lg md:rounded-none"
+    >
+      <li class="w-full md:w-auto">
+        <a
+          href="#about"
+          class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium block px-4 py-3 md:px-3 md:py-2 rounded-md md:rounded-lg relative"
+          data-section="about"
+        >
+          About
+          <span class="nav-indicator absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-800 transition-all duration-300"></span>
+        </a>
+      </li>
+      {
+        hasProjects && (
+          <li class="w-full md:w-auto">
+            <a
+              href="#projects"
+              class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium block px-4 py-3 md:px-3 md:py-2 rounded-md md:rounded-lg relative"
+              data-section="projects"
+            >
+              Projects
+              <span class="nav-indicator absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-800 transition-all duration-300"></span>
+            </a>
+          </li>
+        )
+      }
+      {
+        hasExperience && (
+          <li class="w-full md:w-auto">
+            <a
+              href="#experience"
+              class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium block px-4 py-3 md:px-3 md:py-2 rounded-md md:rounded-lg relative"
+              data-section="experience"
+            >
+              Experience
+              <span class="nav-indicator absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-800 transition-all duration-300"></span>
+            </a>
+          </li>
+        )
+      }
+      {
+        hasEducation && (
+          <li class="w-full md:w-auto">
+            <a
+              href="#education"
+              class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium block px-4 py-3 md:px-3 md:py-2 rounded-md md:rounded-lg relative"
+              data-section="education"
+            >
+              Education
+              <span class="nav-indicator absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-800 transition-all duration-300"></span>
+            </a>
+          </li>
+        )
+      }
+      {
+        siteConfig.cvUrl && (
+          <li class="w-full md:w-auto md:ml-2">
+            <a
+              href={siteConfig.cvUrl}
+              download
+              class="px-5 py-3 md:py-2 rounded-lg font-medium transition-all duration-300 block text-center text-white shadow-md hover:shadow-lg hover:scale-105 active:scale-95"
+              style={`background: linear-gradient(135deg, ${siteConfig.accentColor}, #2563eb);`}
+            >
+              Download CV
+            </a>
+          </li>
+        )
+      }
+    </ul>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle with hamburger animation
+  const menuToggle = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+  const hamburgerSpans = menuToggle?.querySelectorAll("span") || [];
+
+  menuToggle?.addEventListener("click", () => {
+    const isHidden = navMenu?.classList.toggle("hidden");
+    const isExpanded = !isHidden;
+    
+    menuToggle.setAttribute("aria-expanded", isExpanded.toString());
+
+    // Animate hamburger to X
+    if (isExpanded) {
+      hamburgerSpans[0].style.transform = "rotate(45deg) translate(8px, 8px)";
+      hamburgerSpans[1].style.opacity = "0";
+      hamburgerSpans[2].style.transform = "rotate(-45deg) translate(8px, -8px)";
+    } else {
+      hamburgerSpans[0].style.transform = "none";
+      hamburgerSpans[1].style.opacity = "1";
+      hamburgerSpans[2].style.transform = "none";
+    }
+  });
+
+  // Close menu when clicking on a link
+  const navLinks = navMenu?.querySelectorAll("a");
+  navLinks?.forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu?.classList.add("hidden");
+      menuToggle?.setAttribute("aria-expanded", "false");
+      
+      // Reset hamburger animation
+      hamburgerSpans[0].style.transform = "none";
+      hamburgerSpans[1].style.opacity = "1";
+      hamburgerSpans[2].style.transform = "none";
+    });
+  });
+
+  // Active section indicator
+  function updateActiveLink() {
+    const scrollPosition = window.scrollY + 100;
+    const sections = document.querySelectorAll("[id='about'], [id='projects'], [id='experience'], [id='education']");
+    
+    navLinks?.forEach((link) => {
+      const indicator = link.querySelector(".nav-indicator") as HTMLElement;
+      link.classList.remove("text-blue-600", "font-bold");
+      if (indicator) {
+        indicator.style.width = "0";
+      }
+    });
+
+    sections.forEach((section) => {
+      const sectionTop = (section as HTMLElement).offsetTop;
+      const sectionHeight = (section as HTMLElement).offsetHeight;
+      
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        const sectionId = section.id;
+        const activeLink = document.querySelector(`a[data-section="${sectionId}"]`);
+        
+        if (activeLink) {
+          activeLink.classList.add("text-blue-600", "font-bold");
+          const indicator = activeLink.querySelector(".nav-indicator") as HTMLElement;
+          if (indicator) {
+            indicator.style.width = "100%";
+          }
+        }
+      }
+    });
+  }
+
+  window.addEventListener("scroll", updateActiveLink);
+  updateActiveLink(); // Initial call
+
+  // Header background on scroll
+  window.addEventListener("scroll", () => {
+    const header = document.getElementById("header");
+    if (window.scrollY > 100) {
+      header?.classList.add("bg-white/95", "backdrop-blur-md", "shadow-md");
+    } else {
+      header?.classList.remove("bg-white/95", "backdrop-blur-md", "shadow-md");
+    }
+  });
+</script>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-indicator {
+    bottom: -4px;
+  }
+</style>
