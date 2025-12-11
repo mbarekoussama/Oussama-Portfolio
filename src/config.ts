@@ -8,7 +8,7 @@ export const siteConfig = {
   social: {
     email: "mbarekoussama2004@gmail.com",
     linkedin: "https://www.linkedin.com/in/oussama-mbarek",
-    twitter: "https://x.com/mbarek_oussama",
+    instagram: "https://www.instagram.com/oussama__mbarek",
     github: "https://github.com/mbarekoussama",
   },
   aboutMe: 

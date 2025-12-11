@@ -10,7 +10,7 @@ import { siteConfig } from "../config";
   <!-- Gradient overlay -->
   <div
     class="absolute inset-0 -z-10"
-    style={`background: radial-gradient(ellipse 800px 1200px at 0% 0%, ${siteConfig.accentColor}40 0%, ${siteConfig.accentColor}25 20%, ${siteConfig.accentColor}10 40%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.8) 90%, white 100%)`}
+    style={`background: radial-gradient(ellipse 1500px 2500px at 0% 0%, ${siteConfig.accentColor}40 0%, ${siteConfig.accentColor}25 20%, ${siteConfig.accentColor}10 40%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.8) 90%, white 100%)`}
   >
   </div>
   <svg
@@ -141,7 +141,7 @@ import { siteConfig } from "../config";
         <h1
           class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 animate-fade-in animation-delay-200"
         >
-          I'm <span style={{ color: siteConfig.accentColor }}
+          I'm <span id="name-span" style={{ color: siteConfig.accentColor }}
             >{siteConfig.name}</span
           >
         </h1>
@@ -239,12 +239,12 @@ import { siteConfig } from "../config";
       )
     }
     {
-      siteConfig.social?.twitter && (
+      siteConfig.social?.instagram && (
         <a
-          href={siteConfig.social.twitter}
+          href={siteConfig.social.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Twitter"
+          aria-label="instagram"
           class="transition-colors duration-300 hover:text-[var(--accent-color)]"
         >
           <svg

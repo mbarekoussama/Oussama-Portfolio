@@ -3,3 +3,115 @@
 body {
   font-family: 'IBM Plex Mono', monospace;
 }
+
+/* Dark Mode Styles */
+:root {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+/* Transition fluide pour le changement de thème */
+html,
+html * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Désactiver la transition sur les animations */
+html.dark *:not([class*="animate"]) {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Variables de couleur pour le mode sombre */
+html.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --border-color: #475569;
+}
+
+html:not(.dark) {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+}
+
+/* Appliquer les couleurs aux sections principales */
+html.dark body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+html.dark footer {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+html.dark section {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+html.dark input,
+html.dark textarea {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6 {
+  color: var(--text-primary);
+}
+
+html.dark p {
+  color: var(--text-secondary);
+}
+
+html.dark .text-gray-50 {
+  background-color: var(--bg-secondary);
+}
+
+html.dark .bg-white {
+  background-color: var(--bg-tertiary);
+}
+
+html.dark .bg-gray-50 {
+  background-color: var(--bg-secondary);
+}
+
+html.dark .border-gray-200 {
+  border-color: var(--border-color);
+}
+
+html.dark .text-gray-600 {
+  color: var(--text-secondary);
+}
+
+html.dark .text-gray-700 {
+  color: var(--text-primary);
+}
+
+html.dark .text-gray-800 {
+  color: var(--text-primary);
+}
+
+html.dark .bg-gray-100 {
+  background-color: var(--bg-tertiary);
+}
