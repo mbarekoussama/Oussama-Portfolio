@@ -3,7 +3,7 @@ export const siteConfig = {
   title: "Computer Science Student | AI / WEB /Mobile Developer",
   description:  "Portfolio website of Mbarek Oussama - Computer Science student passionate about web development, mobile applications, and innovative technologies",
   accentColor: "#1d4ed8",
-  profileImage: "public/profile.png", 
+  profileImage: "/profile.png", 
   cvUrl: "/oussama mbarek.pdf", 
   social: {
     email: "mbarekoussama2004@gmail.com",
