@@ -57,27 +57,20 @@
   const moonIcon = document.getElementById("moon-icon");
   const htmlElement = document.documentElement;
 
-  // Récupérer le thème sauvegardé ou utiliser le préférence système
+  // Récupérer le thème sauvegardé ou utiliser le mode clair par défaut
   function initTheme() {
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    if (savedTheme) {
-      // Utiliser le thème sauvegardé
-      if (savedTheme === "dark") {
-        htmlElement.classList.add("dark");
-        sunIcon?.classList.add("hidden");
-        moonIcon?.classList.remove("hidden");
-      } else {
-        htmlElement.classList.remove("dark");
-        sunIcon?.classList.remove("hidden");
-        moonIcon?.classList.add("hidden");
-      }
-    } else if (prefersDark) {
-      // Utiliser la préférence système
+    if (savedTheme === "dark") {
+      // Utiliser le thème sauvegardé (dark)
       htmlElement.classList.add("dark");
       sunIcon?.classList.add("hidden");
       moonIcon?.classList.remove("hidden");
+    } else {
+      // Mode clair par défaut
+      htmlElement.classList.remove("dark");
+      sunIcon?.classList.remove("hidden");
+      moonIcon?.classList.add("hidden");
     }
   }
 
