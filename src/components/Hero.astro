@@ -130,7 +130,9 @@ import { siteConfig } from "../config";
       stroke-width={0}></rect>
   </svg>
   <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center">
-    <div class="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12 w-full">
+    <div
+      class="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12 w-full"
+    >
       <!-- Texte à gauche -->
       <div class="flex-1">
         <h2
@@ -145,13 +147,16 @@ import { siteConfig } from "../config";
             >{siteConfig.name}</span
           >
         </h1>
-        
+
         <!-- Texte avec animation typewriter -->
         <div
           id="typewriter"
           class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 min-h-[1.5em] md:min-h-[2em] animate-fade-in animation-delay-400"
         >
-          <span id="typewriter-text"></span><span id="typewriter-cursor" class="animate-blink">|</span>
+          <span id="typewriter-text"></span><span
+            id="typewriter-cursor"
+            class="animate-blink">|</span
+          >
         </div>
       </div>
 
@@ -160,10 +165,10 @@ import { siteConfig } from "../config";
         siteConfig.profileImage && (
           <div class="flex-shrink-0 animate-fade-in animation-delay-300">
             <div class="relative group">
-              <div 
+              <div
                 class="absolute inset-0 rounded-full blur-3xl opacity-50 group-hover:opacity-70 transition-opacity duration-300"
                 style={`background: linear-gradient(135deg, ${siteConfig.accentColor}, #2563eb);`}
-              ></div>
+              />
               <img
                 src={siteConfig.profileImage}
                 alt={siteConfig.name}
@@ -173,7 +178,6 @@ import { siteConfig } from "../config";
           </div>
         )
       }
-      
     </div>
   </div>
   <div
@@ -261,8 +265,9 @@ import { siteConfig } from "../config";
           >
             <>
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
-              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+              <rect x="4" y="4" width="16" height="16" rx="4" />
+              <circle cx="12" cy="12" r="3" />
+              <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
             </>
           </svg>
         </a>

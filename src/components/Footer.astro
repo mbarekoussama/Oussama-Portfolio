@@ -8,7 +8,6 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 
 <footer class="relative bg-gray-50 border-t border-gray-200">
   <div class="mx-auto max-w-6xl px-6 py-12 lg:px-8">
-    
     <!-- Section Professional Contact -->
     <div class="mb-12 pb-12 border-b border-gray-200">
       <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
@@ -21,7 +20,10 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         >
           <!-- Nom -->
           <div>
-            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              for="name"
+              class="block text-sm font-medium text-gray-700 mb-2"
+            >
               Your Name
             </label>
             <input
@@ -31,13 +33,16 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
               required
               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:outline-none transition-all"
               style={`--focus-color: ${siteConfig.accentColor}`}
-              placeholder="Mbarek Oussama"
+              placeholder="Chaima Ben Fradj"
             />
           </div>
 
           <!-- Email -->
           <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              for="email"
+              class="block text-sm font-medium text-gray-700 mb-2"
+            >
               Your Email
             </label>
             <input
@@ -53,7 +58,10 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 
           <!-- Subject -->
           <div>
-            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              for="subject"
+              class="block text-sm font-medium text-gray-700 mb-2"
+            >
               Subject
             </label>
             <input
@@ -69,7 +77,10 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 
           <!-- Message -->
           <div>
-            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              for="message"
+              class="block text-sm font-medium text-gray-700 mb-2"
+            >
               Message
             </label>
             <textarea
@@ -91,9 +102,24 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           >
             <span id="btn-text">Send Message</span>
             <span id="btn-loader" class="hidden">
-              <svg class="animate-spin h-5 w-5 inline mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              <svg
+                class="animate-spin h-5 w-5 inline mr-2"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  class="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="4"></circle>
+                <path
+                  class="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
               </svg>
               Sending...
             </span>
@@ -105,7 +131,10 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg flex items-center gap-2"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd"></path>
             </svg>
             <span> Message sent successfully! I will reply soon.</span>
           </div>
@@ -116,9 +145,13 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg flex items-center gap-2"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                clip-rule="evenodd"></path>
             </svg>
-            <span id="error-text">Error sending message. Please try again.</span>
+            <span id="error-text">Error sending message. Please try again.</span
+            >
           </div>
         </form>
       </div>
@@ -205,10 +238,12 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
               stroke-linecap="round"
               stroke-linejoin="round"
               class="h-6 w-6"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path
-                d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg
             >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+              <circle cx="12" cy="12" r="3"></circle>
+              <line x1="16.5" y1="7.5" x2="16.5" y2="7.501"></line>
+            </svg>
           </a>
           <a
             href={siteConfig.social.github}
@@ -331,8 +366,10 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 
     const name = (document.getElementById("name") as HTMLInputElement)?.value;
     const email = (document.getElementById("email") as HTMLInputElement)?.value;
-    const subject = (document.getElementById("subject") as HTMLInputElement)?.value;
-    const message = (document.getElementById("message") as HTMLTextAreaElement)?.value;
+    const subject = (document.getElementById("subject") as HTMLInputElement)
+      ?.value;
+    const message = (document.getElementById("message") as HTMLTextAreaElement)
+      ?.value;
 
     // Show loading state
     submitBtn.disabled = true;
@@ -377,7 +414,8 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         // Error
         errorMessage?.classList.remove("hidden");
         successMessage?.classList.add("hidden");
-        errorText!.textContent = result.message || "Error sending message. Please try again.";
+        errorText!.textContent =
+          result.message || "Error sending message. Please try again.";
 
         // Reset button
         submitBtn.disabled = false;
