@@ -1,15 +1,15 @@
 export const siteConfig = {
-  name: "BEN FRADJ CHAIMA",
+  name: "MBAREK OUSSAMA",
   title: "Computer Science Student | AI / WEB /Mobile Developer",
-  description: "Portfolio website of Chaima Ben Fradj - Computer Science student passionate about web development, mobile applications, and innovative technologies",
+  description: "Portfolio website of MBAREK OUSSAMA - Computer Science student passionate about web development, mobile applications, and innovative technologies",
   accentColor: "#1d4ed8",
   profileImage: "/profile.png",
-  cvUrl: "/chaima ben fradj.pdf",
+  cvUrl: "/oussama mbarek.pdf",
   social: {
-    email: "chaimabenfradj60@gmail.com",
-    linkedin: "https://www.linkedin.com/in/benfradjchaima",
-    instagram: "https://www.instagram.com/chaima_ben_fredj",
-    github: "https://github.com/chaimabenfredj60",
+    email: "mbarekoussama2004@gmail.com",
+    linkedin: "https://www.linkedin.com/in/oussama-mbarek",
+    instagram: "https://www.instagram.com/oussama__mbarek",
+    github: "https://github.com/mbarekoussama",
   },
   aboutMe:
     "Computer Science student at the Faculty of Sciences of Monastir, passionate about web development, mobile applications, and innovative technologies. Strong skills in programming and software design, with a results-oriented approach, continuous learning, and innovation.  Teamwork, rigor, and creativity characterize my working approach on high-impact technology projects.",
@@ -17,10 +17,18 @@ export const siteConfig = {
   projects: [
 
     {
+      name: "Edu code",
+      description:
+        "online platform for learning programming languages.",
+      link: "https://edu-code-rho.vercel.app/",
+      skills: ["html", "css", "js", "mongodb", "php", "bootstrap"],
+    },
+
+    {
       name: "WJob - Recruitment Platform (Mobile App)",
       description:
         "Developed a mobile app connecting recruiters and candidates.  Managed profiles, applications, and analytical dashboards. Objective: Simplify and modernize the recruitment process.",
-      link: "https://github.com/chaimabenfredj60/WJob-develop",
+      link: "https://github.com/mbarekoussama/WJob-develop",
       skills: ["Flutter", "Django", "REST API"],
     },
     {
@@ -56,7 +64,7 @@ export const siteConfig = {
     {
       school: "Faculty of Sciences of Monastir",
       degree: "Bachelor's Degree in Computer Science",
-      dateRange: "2021- 2026",
+      dateRange: "2023- 2026",
       achievements: [
         "Currently pursuing Computer Science degree",
         "Focus on web and mobile development",
@@ -64,9 +72,9 @@ export const siteConfig = {
       ],
     },
     {
-      school: "lycee se bkalta",
-      degree: "Baccalaureate in technology",
-      dateRange: "2020- 2021",
+      school: "lycee Ali Borguiba kalaa kebira",
+      degree: "Baccalaureate in mathematics",
+      dateRange: "2022- 2023",
       achievements: [
         "Completed secondary education with distinction",
         "Mathematics specialization",
