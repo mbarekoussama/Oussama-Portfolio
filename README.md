@@ -1,6 +1,6 @@
-# 🚀 Modern Portfolio Template
+# 🚀 Oussama Mbarek - Portfolio
 
-A clean, minimalist, and fully customizable portfolio website built with **Astro** and **Tailwind CSS v4**. Perfect for developers, designers, and professionals looking to showcase their work and experience.
+A clean, minimalist portfolio website built with **Astro** and **Tailwind CSS v4**. This modern portfolio showcases my work, experience, and skills as a Computer Science student and developer. Feel free to use it as a template for your own portfolio!
 
 [![Astro](https://img.shields.io/badge/Astro-5.12.3-FF5D01?style=flat&logo=astro&logoColor=white)](https://astro.build)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.11-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
@@ -178,7 +178,7 @@ Edit `src/config.ts` with your personal information, projects, experience, and e
 ### 2. Add Your Images
 
 - Replace `public/profile.png` with your profile photo
-- Replace `public/oussama mbarek.pdf` with your CV (keep the file extension as `.pdf`)
+- Replace the CV PDF in `public/` with your own resume (keep the file extension as `.pdf`)
 - Update the file names in `config.ts` if needed
 
 ### 3. Change the Accent Color
