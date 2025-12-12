@@ -11,11 +11,13 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
   id="header"
   class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
 >
-  <nav class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+  <nav
+    class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between"
+  >
     <!-- Logo/Brand -->
     <div class="flex-shrink-0">
-      <a 
-        href="#" 
+      <a
+        href="#"
         class="text-lg md:text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent hover:opacity-80 transition-opacity dark:from-blue-400 dark:to-blue-600"
       >
         {siteConfig.name.split(" ")[0]}
@@ -34,9 +36,15 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         aria-label="Toggle menu"
         aria-expanded="false"
       >
-        <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-200 transition-all duration-300 transform origin-center"></span>
-        <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-200 transition-all duration-300 transform origin-center"></span>
-        <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-200 transition-all duration-300 transform origin-center"></span>
+        <span
+          class="w-6 h-0.5 bg-gray-800 dark:bg-gray-200 transition-all duration-300 transform origin-center"
+        ></span>
+        <span
+          class="w-6 h-0.5 bg-gray-800 dark:bg-gray-200 transition-all duration-300 transform origin-center"
+        ></span>
+        <span
+          class="w-6 h-0.5 bg-gray-800 dark:bg-gray-200 transition-all duration-300 transform origin-center"
+        ></span>
       </button>
     </div>
 
@@ -52,7 +60,9 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           data-section="about"
         >
           About
-          <span class="nav-indicator absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-800 transition-all duration-300"></span>
+          <span
+            class="nav-indicator absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-800 transition-all duration-300"
+          ></span>
         </a>
       </li>
       {
@@ -64,7 +74,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
               data-section="projects"
             >
               Projects
-              <span class="nav-indicator absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-800 transition-all duration-300"></span>
+              <span class="nav-indicator absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-800 transition-all duration-300" />
             </a>
           </li>
         )
@@ -78,7 +88,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
               data-section="experience"
             >
               Experience
-              <span class="nav-indicator absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-800 transition-all duration-300"></span>
+              <span class="nav-indicator absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-800 transition-all duration-300" />
             </a>
           </li>
         )
@@ -92,7 +102,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
               data-section="education"
             >
               Education
-              <span class="nav-indicator absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-800 transition-all duration-300"></span>
+              <span class="nav-indicator absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-800 transition-all duration-300" />
             </a>
           </li>
         )
@@ -124,7 +134,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
   menuToggle?.addEventListener("click", () => {
     const isHidden = navMenu?.classList.toggle("hidden");
     const isExpanded = !isHidden;
-    
+
     menuToggle.setAttribute("aria-expanded", isExpanded.toString());
 
     // Animate hamburger to X
@@ -145,7 +155,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
     link.addEventListener("click", () => {
       navMenu?.classList.add("hidden");
       menuToggle?.setAttribute("aria-expanded", "false");
-      
+
       // Reset hamburger animation
       hamburgerSpans[0].style.transform = "none";
       hamburgerSpans[1].style.opacity = "1";
@@ -156,8 +166,10 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
   // Active section indicator
   function updateActiveLink() {
     const scrollPosition = window.scrollY + 100;
-    const sections = document.querySelectorAll("[id='about'], [id='projects'], [id='experience'], [id='education']");
-    
+    const sections = document.querySelectorAll(
+      "[id='about'], [id='projects'], [id='experience'], [id='education']",
+    );
+
     navLinks?.forEach((link) => {
       const indicator = link.querySelector(".nav-indicator") as HTMLElement;
       link.classList.remove("text-blue-600", "font-bold");
@@ -169,14 +181,21 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
     sections.forEach((section) => {
       const sectionTop = (section as HTMLElement).offsetTop;
       const sectionHeight = (section as HTMLElement).offsetHeight;
-      
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+
+      if (
+        scrollPosition >= sectionTop &&
+        scrollPosition < sectionTop + sectionHeight
+      ) {
         const sectionId = section.id;
-        const activeLink = document.querySelector(`a[data-section="${sectionId}"]`);
-        
+        const activeLink = document.querySelector(
+          `a[data-section="${sectionId}"]`,
+        );
+
         if (activeLink) {
           activeLink.classList.add("text-blue-600", "font-bold");
-          const indicator = activeLink.querySelector(".nav-indicator") as HTMLElement;
+          const indicator = activeLink.querySelector(
+            ".nav-indicator",
+          ) as HTMLElement;
           if (indicator) {
             indicator.style.width = "100%";
           }
