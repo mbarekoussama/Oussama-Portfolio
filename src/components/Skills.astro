@@ -1,0 +1,89 @@
+---
+import { siteConfig } from "../config";
+
+const { technicalSkills } = siteConfig;
+
+interface SkillCategory {
+  title: string;
+  items: string[];
+}
+
+const skillCategories: SkillCategory[] = [
+  {
+    title: "Languages",
+    items: technicalSkills.languages,
+  },
+  {
+    title: "Frameworks",
+    items: technicalSkills.frameworks,
+  },
+  {
+    title: "Databases",
+    items: technicalSkills.databases,
+  },
+  {
+    title: "Cloud & DevOps",
+    items: technicalSkills.cloudDevOps,
+  },
+  {
+    title: "AI & ML",
+    items: technicalSkills.aiML,
+  },
+  {
+    title: "Tools",
+    items: technicalSkills.tools,
+  },
+];
+---
+
+<section id="skills" class="p-8 sm:p-12 md:p-16 lg:p-24">
+  <div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-4">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-1000">
+          Technical Skills
+        </h2>
+        <div
+          class="w-[75px] h-[5px] mt-2 rounded-full"
+          style={`background-color: ${siteConfig.accentColor}`}
+        >
+        </div>
+      </div>
+
+      <div class="lg:col-span-8 space-y-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {skillCategories.map((category) => (
+            <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-4">
+                {category.title}
+              </h3>
+              <div class="flex flex-wrap gap-3 border-t pt-4">
+                {category.items.map((skill) => (
+                  <span 
+                    class="skill-badge px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-medium transition-colors duration-200 cursor-pointer"
+                    style={`background-color: #000000; color: #ffffff ; border: 1px solid ${siteConfig.accentColor}`}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style define:vars={{ accentColor: siteConfig.accentColor }}>
+  .skill-badge {
+    background-color: color-mix(in srgb, var(--accentColor) 10%, transparent);
+    border: 1px solid var(--accentColor);
+    color: #ffffff;
+  }
+
+  .skill-badge:hover {
+    background-color: var(--accentColor);
+    color: white;
+  }
+</style>

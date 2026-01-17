@@ -13,6 +13,14 @@ export const siteConfig = {
   },
   aboutMe:
     "Computer Science student at the Faculty of Sciences of Monastir, passionate about web development, mobile applications, and innovative technologies. Strong skills in programming and software design, with a results-oriented approach, continuous learning, and innovation.  Teamwork, rigor, and creativity characterize my working approach on high-impact technology projects.",
+  technicalSkills: {
+    languages: ["Python", "Java", "JavaScript", "C++", "HTML5", "CSS3", "XML", "Flutter", "C#", "C"],
+    frameworks: ["Spring Boot", "React", "Angular", "Django", "Node.js", "Dotnet"],
+    databases: ["MySQL", "PostgreSQL", "MongoDB"],
+    cloudDevOps: ["AWS", "GitHub", "Docker"],
+    aiML: ["Machine Learning", "Deep Learning", "NLP"],
+    tools: ["VS Code", "IntelliJ IDEA", "Android Studio", "Eclipse"],
+  },
   skills: ["Python", "Java", "C++", "JavaScript", "React", "Angular", "Node.js", "Spring Boot", "Django", "Flutter", "MySQL", "MongoDB", "AWS",".NET"],
   projects: [
 
