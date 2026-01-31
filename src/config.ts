@@ -4,9 +4,9 @@ export const siteConfig = {
   description: "Portfolio website of MBAREK OUSSAMA - Computer Science student passionate about web development, mobile applications, and innovative technologies",
   accentColor: "#1d4ed8",
   profileImage: "/profile.png",
-  cvUrl: "/oussama mbarek.pdf",
+  cvUrl: "/mbarek_oussama.pdf",
   social: {
-    email: "mbarekoussama2004@gmail.com",
+    email: "mbarek.oussama.dev@gmail.com",
     linkedin: "https://www.linkedin.com/in/oussama-mbarek",
     instagram: "https://www.instagram.com/oussama__mbarek",
     github: "https://github.com/mbarekoussama",
@@ -45,6 +45,13 @@ export const siteConfig = {
         "Web platform for managing schedules at the Faculty of Sciences of Monastir. Managed timetables, classrooms, teachers, and availability. Objective: Replace manual management and modernize scheduling.",
       link: "https://github.com/mbarekoussama/Emploi-FSM",
       skills: ["Java", "Spring Boot", "Angular", "H2"],
+    },
+    {
+      name: "DicomViwer - Medical Image Viewer",
+      description:
+        "Developed a desktop application for viewing and analyzing DICOM medical images. Implemented features for image manipulation, annotation, and 3D reconstruction. Objective: Provide healthcare professionals with a powerful tool for medical imaging analysis.",
+      link: " https://dicom-view.vercel.app/",
+      skills: ["react", "cornerstone.js"],
     },
     {
       name: "Mon Portfolio - Personal Portfolio Website",
